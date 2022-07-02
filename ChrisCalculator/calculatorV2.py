@@ -14,22 +14,8 @@ def divide(x, y):
 
 def exponent(x, y):
     return x**y
-    
-    # i = 1
-    # a = 0
-    # if y > 0:
-    #     if y > 1:
-    #         while i < y:
-    #             x *= x
-    #             i+=1
-    #             a=x 
-    #     elif y==1:
-    #         a=x
-    #     elif y%1 != 0:
-    #         pass
-    
-    # return a
-    
+
+
 
 def square_root(x):
     return math.sqrt(x)
@@ -46,7 +32,7 @@ print('''Select operation
 2.Subtract
 3.Multiply
 4.Divide
-5. 
+5.exponent
 exit: to exit''')
 
 
