@@ -1,8 +1,8 @@
 class Card:
     def __init__(self,value,suit):
         self.cost = value
-        self.value = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'][value-1]
-        self.suit = '♥♦♣♠'[suit]
+        self.value = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'][value-1] #why is there value -1
+        self.suit = '♥♦♣♠'[suit] # what does suit do
         
     def show(self):
         print('┌───────┐')
@@ -11,7 +11,7 @@ class Card:
         print(f'|   {self.suit}   |')
         print('|       |')
         print(f'|    {self.value:>2} |')
-        print('└───────┘') 
+        print('└───────┘') #what's the self.value:>2 in printing visuals
 
     def price(self):
         if self.cost >= 10:
