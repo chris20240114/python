@@ -55,11 +55,11 @@ X = [10, 20, 20, 20]
 Y = [10, 20, 30, 40]
 Z = [10, 30, 40, 20]
 target = 70
-
+'''
 
 #12 permutations
 
-list12 = [1, 2, 3] 
+'''list12 = [1, 2, 3] 
 def permutations(num):
   result_perms = [[]]
   for n in num:
@@ -68,12 +68,18 @@ def permutations(num):
       for i in range(len(p)+1):
         new_perms.append(p[:i] + [n] + p[i:])
         result_perms = new_perms
-  return result_perms
-    
-print(permutations(list12))
+  return result_perms'''
+
+permute = [[]]
+numlist = [1, 2, 3]
+permute.append(numlist[:0])
+print(permute)
+
+#print(permutations(list12))
 
 #help i don't get this one
 
+'''
 #13 area of triangle
 
 print('input base')
@@ -84,6 +90,7 @@ area = base*height/2
 
 print('area:', area)
 
+'''
 #14 Write a Python program to find common divisors between two numbers in a given pair. 
 
 pair = [6, 12]
@@ -95,17 +102,16 @@ def cd(x, y):
     common_divisor = []
     while(i<=x and i<=y):
         if(x%i==0 and y%i == 0):
-            i=common_divisor
             common_divisor.append(i)
             i+=1
-        else i+=1
+        else: i+=1
     return common_divisor
 
 
 print("greatest common divisors: ",cd(6, 12))
 print("greatest common divisors: ",cd(2, 8))
 print("greatest common divisors: ",cd(12, 24))
-
+'''
 #15. Write a Python program to check whether three given lengths (integers) of three sides form a right triangle. Print "Yes" if the given sides form a right triangle otherwise print "No". 
 
 def pythagorean(a, o, h):

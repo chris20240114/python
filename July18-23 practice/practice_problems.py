@@ -125,3 +125,8 @@ print("\nOriginal list:")
 print(nums)
 print("Check two occurrences of nineteen and at least three occurrences of five in the said list:")
 print(test(nums))
+
+with open(r"/Users/christopher/Downloads/Document36.txt", 'r') as fp:
+    linecount = len(fp.readlines())
+
+interview = open("/Users/christopher/Downloads/Document36.txt", "r")
