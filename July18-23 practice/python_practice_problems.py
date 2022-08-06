@@ -1,7 +1,7 @@
 #1. Write a Python function student_data () which will print the id of a student (student_id). If the user passes an argument student_name or student_class the function will print the student name and class.
     
-import keyboard 
-
+#import keyboard 
+'''
 def student_data(**kwargs): 
     if 'student_id' in kwargs:
         student_id = {kwargs['student_id']}
@@ -15,13 +15,15 @@ def student_data(**kwargs):
 student_data(student_id = 'FN1', student_class = 'History', student_name = 'John')
 
 
-class Student:
-    student_id = 'V10'
-    student_name = 'Jacqueline Barnett'  
+class Student(object):
+    def __init__(self, id, name):
+        self.student_id = id
+        self.student_name = name
 #Original attributes and their values of the Student class:
-for attr, value in Student.__dict__.items():
-    if not attr.startswith('_'):
-        print(f'{attr} -> {value}')
+def original_attribute(self):
+    for attr, value in Student.__dict__.items():
+        if not attr.startswith('_'):
+            print(f'{attr} -> {value}')
 #After adding the student_class, attributes and their values with the said class:
 Student.student_class  = 'V'
 for attr, value in Student.__dict__.items():
@@ -38,10 +40,11 @@ Student.student_number = '1'
 for attr, value in Student.__dict__.items():
     if not attr.startswith('_'):
         print(f'{attr} = {value}')
-
+'''
+'''
 if keyboard.read_key() == "a": 
     print ('You pressed "a".')
-
+'''
 
 #3. Write a Python program to reverse a string. Go to the editor
 '''
@@ -49,16 +52,20 @@ Sample String : "1234abcd"
 Expected Output : "dcba4321" 
 '''
 
+from xml.etree.ElementTree import PI
+
+
 def reverse_string(x):
     y= ''.join(list(reversed(x)))
-    print (y)
-reverse_string('123456789')
+    return y
+print(reverse_string('123456789'))
 
 #or
 
 def reverse_string1(x):
-    print (x[::-1])
-reverse_string1('123456789')
+    return (x[::-1])
+
+print(reverse_string1('123456789'))
 
 #4. Write a Python program to calculate the sum of a list of numbers with recursion 
 
@@ -76,10 +83,12 @@ print(sum([1, 3, 5, 7]))
 #π/180 rad = 1 degree
 #180/π = 1 rad
 
+PI=22/7
+DEGREES = 180
 def degree_to_radian(x):
-    y= x*3.1415926535/180
-    return y
+    y= x*PI/DEGREES
+    return y 
 
-print (degree_to_radian(20))
+print(degree_to_radian(20))
 
 #6. 

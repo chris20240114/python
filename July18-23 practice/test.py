@@ -1,20 +1,23 @@
-with open(r"/Users/christopher/Downloads/Document36.txt", 'r') as fp:
-    linecount = len(fp.readlines())
+import random
+import os
 
-interview = open("/Users/christopher/Downloads/Document36.txt", "r")
+print("Select a random element from a list:")
+List1 = [1, 2, 3, 4, 5]
+print(random.choice(List1))
+print(random.choice(List1))
+print(random.choice(List1))
 
-y=0
-formatted_interview = [ ]
-Speaker = ''
-isTrue = False
-while y < 1:
-    newline=(interview.readline())
-    if newline.strip() == "Audio file":
-        Speaker = 'I:'
-        formatted_interview.append('I: ')
-        isTrue = True
-    y+=1
-print(newline)
-print(formatted_interview)
-print(isTrue)
-print(len(newline))
+print("Select a random element from a set:")
+Set = set([1, 2, 3, 4, 5])
+print(random.choice(tuple(Set)))
+print(random.choice(tuple(Set)))
+print(random.choice(tuple(Set)))
+
+print("Select a random value from a dictionary:")
+dictionary = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+key = random.choice(list(dictionary))
+print(dictionary[key])
+key = random.choice(list(dictionary))
+print(dictionary[key])
+key = random.choice(list(dictionary))
+print(dictionary[key]) 
