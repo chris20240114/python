@@ -11,6 +11,7 @@ class TreeNodes(object):
     
     def BFS(self, value):
         if self.val == value:
+            print(type(self))
             return self
         else:
             for i in self.children:
@@ -19,6 +20,7 @@ class TreeNodes(object):
     def DFS(self, value):
         Visited = []
         if self.val == value:
+            print(Visited)
             return self
         elif len(self.children) == 0:
             Visited.append(self.val)
@@ -46,13 +48,12 @@ class TreeNodes(object):
                 (parent.children.remove(parent.children[i]))
                 return 1
 
-tree = TreeNodes('R')
-print(tree.val)
-
-tree.insertNode('R', 'I')
-print(tree.children)
-
-tree.deleteNode('I')
+tree = TreeNodes('A')
+tree.insertNode('A', 'B')
+tree.insertNode('A', 'C')
+tree.insertNode('B', 'D')
+tree.insertNode('B', 'E')
+print(tree.BFS('C').val)
 print(tree.children)
 
 
