@@ -1,4 +1,26 @@
 import math
+import sys
+from PyQt6.QtWidgets import QApplication, QLabel, QWidget
+
+app = QApplication([])
+window = QWidget()
+window.setWindowTitle("PyQt App")
+window.setGeometry(100, 800, 280, 800)
+helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
+helloMsg.move(60, 15)
+layout = QHBoxLayout()
+layout1 = QVBoxLayout()
+
+layout.addWidget(QPushButton("Addition"))
+layout1.addWidget(QPushButton("Subtraction"))
+layout.addWidget(QPushButton("Multiplication"))
+layout1.addWidget(QPushButton("Division"))
+
+
+window.setLayout(layout1)
+window.show()
+sys.exit(app.exec())
+
 
 def add(x, y):
     return x + y
@@ -73,3 +95,15 @@ while True:
             print(str(factorial(value1)))
         elif userchoice == 'sqrt':
             print(str(square_root(value1)))
+    continue_using = input("would you like to continue? Enter y/n")
+    if continue_using == 'y' or continue_using == 'yes':
+        continue
+    else: 
+        break
+
+app = QApplication([])
+window = QWidget()
+window.setWindowTitle("PyQt App")
+window.setGeometry(100, 100, 280, 80)
+helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
+helloMsg.move(60, 15)
