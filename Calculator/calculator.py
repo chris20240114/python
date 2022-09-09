@@ -1,13 +1,56 @@
 import math
 import sys
-from PyQt6.QtWidgets import QApplication, QLabel, QWidget
+from PyQt6.QtWidgets import QApplication, QLabel, QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QGridLayout
 
 app = QApplication([])
 window = QWidget()
+window.setWindowTitle("Calculator")
+layout = QGridLayout()
+
+layout.addWidget(QPushButton("+"), 0, 0)
+layout.addWidget(QPushButton("-"), 0, 1)
+layout.addWidget(QPushButton("*"), 0, 2)
+layout.addWidget(QPushButton("÷"), 1, 0)
+layout.addWidget(QPushButton("^"), 1, 1)
+layout.addWidget(QPushButton("!"), 1, 2)
+layout.addWidget(QPushButton("√"), 2, 0)
+
+
+window.setLayout(layout)
+
+
+window.show()
+
+sys.exit(app.exec())
+'''
+app = QApplication([])
+
+window = QWidget()
+
+window.setWindowTitle("QVBoxLayout")
+
+
+layout = QVBoxLayout()
+
+Addition = layout.addWidget(QPushButton("Addition"))
+Addition.move(100, 50)
+layout.addWidget(QPushButton("Multiplication"))
+
+layout.addWidget(QPushButton("Subtraction"))
+layout.addWidget(QPushButton("division"))
+
+window.setLayout(layout)
+
+
+window.show()
+'''
+'''
+app = QApplication([])
+window = QWidget()
 window.setWindowTitle("PyQt App")
-window.setGeometry(100, 800, 280, 800)
+window.setGeometry(100, 100, 900, 500)
 helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
-helloMsg.move(60, 15)
+helloMsg.move(200, 15)
 layout = QHBoxLayout()
 layout1 = QVBoxLayout()
 
@@ -18,9 +61,9 @@ layout1.addWidget(QPushButton("Division"))
 
 
 window.setLayout(layout1)
-window.show()
-sys.exit(app.exec())
 
+window.show()
+'''
 
 def add(x, y):
     return x + y
@@ -53,12 +96,12 @@ def square_root(x):
 def factorial(x):
     return math.factorial(x)
 
-def fibRec(n):
-        if(n == 1 or n ==2): return 1
-        return fibRec(n-1) + fibRec(n-2) 
+#def fibRec(n):
+#        if(n == 1 or n ==2): return 1
+#        return fibRec(n-1) + fibRec(n-2) 
 
-print (fibRec(6))
-print("Hello".rjust(10))
+#print (fibRec(6))
+#print("Hello".rjust(10))
 
 print("Select operation")
 print("1.Add")
@@ -101,9 +144,4 @@ while True:
     else: 
         break
 
-app = QApplication([])
-window = QWidget()
-window.setWindowTitle("PyQt App")
-window.setGeometry(100, 100, 280, 80)
-helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
-helloMsg.move(60, 15)
+sys.exit(app.exec())

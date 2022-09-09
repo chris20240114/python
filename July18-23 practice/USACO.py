@@ -9,6 +9,7 @@
 #What is the minimum number of gondolas needed for the children?
 
 #Input
+x = True
 
 '''The first input line contains two integers n and x: the number of children and the maximum allowed weight.
 
