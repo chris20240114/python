@@ -1,6 +1,8 @@
-from ast import Not
+'''from ast import Not
 from importlib import machinery
 from multiprocessing.resource_sharer import stop
+=======
+>>>>>>> bc0fcbfc85ecc14733c971ddd311733d7ed3ab3c
 import random
 import os
 
@@ -51,11 +53,11 @@ else:
 
 #Write a Python program to get the Fibonacci series between 0 to 50.
 
-'''
+
 Note : The Fibonacci Sequence is the series of numbers :
 0, 1, 1, 2, 3, 5, 8, 13, 21, ....
 Every next number is found by adding up the two numbers before it.
-'''
+
 
 x = 1
 y = 2
@@ -75,3 +77,4 @@ while ' ':
 
 
 
+'''
