@@ -1,3 +1,6 @@
+from os import remove
+import re
+'''
 f = open("whereami.in")
 inp = f.read().strip().split("\n")
 n = int(inp[0])
@@ -20,7 +23,7 @@ for i in range(1, n+1):
 f = open('whereami.out', 'w')
 f.write(str(final))
 f.close()
-
+'''
 
 
 '''
@@ -84,3 +87,25 @@ create a substring of the mailboxes. In a for loop, do a re.match() function, an
 matching sequence from the substring. Check again with the re.match() function, and if there's still an occurance, add
 the next mailbox into the substring.
 '''
+
+def Where(N, MailBoxSequence):
+    testing_substring = ""
+    unique_value = 0
+    for i in range(0, N):
+        temp = MailBoxSequence
+        testing_substring += MailBoxSequence[i]
+        x= re.search(testing_substring, temp).span()
+        while re.search(testing_substring, temp) != None:
+            y= re.findall(testing_substring, temp)
+            print(y[i])
+        print(temp[x[0]:x[1]])
+        temp = temp[i+1:len(temp)]
+        x= re.search(testing_substring, temp)
+        if x == None:
+            unique_value = i+1
+            return unique_value
+        elif x != None:
+            continue
+    return unique_value
+
+print(Where(9, 'ABABCABCD'))
